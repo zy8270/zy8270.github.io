@@ -27,15 +27,12 @@
   opacity: 0.55;
 }
 
-.VPHero .image-container {
-  transform: translate(-32px, -32px) scale(1.05);
-}
-
+/* 图标本身已自带圆角与留白，不再叠加圆角/位移，避免移动端偏离视觉中心 */
 .VPHero .image-src {
   max-width: 168px;
   max-height: 168px;
-  border-radius: 22%;
-  filter: drop-shadow(0 12px 28px rgba(15, 40, 80, 0.22));
+  border-radius: 0;
+  filter: drop-shadow(0 10px 24px rgba(15, 40, 80, 0.18));
 }
 
 .VPHero .name,
