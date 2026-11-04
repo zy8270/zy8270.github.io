@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.dist/
+tmp_shots/
+shot.sh
+ui.sh
+tools/
+*.log
