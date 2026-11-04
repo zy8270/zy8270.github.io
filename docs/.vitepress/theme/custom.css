@@ -27,7 +27,13 @@
   opacity: 0.55;
 }
 
-/* 图标本身已自带圆角与留白，不再叠加圆角/位移，避免移动端偏离视觉中心 */
+/* 图标本身已自带圆角与留白，不再叠加圆角；默认主题给 image-container 加了
+   translate(-32px,-32px) 的偏移（桌面宽屏看着无感，手机窄屏下整块明显偏左），
+   这里统一取消，保证图标落在视觉中心 */
+.VPHero .image-container {
+  transform: none !important;
+}
+
 .VPHero .image-src {
   max-width: 168px;
   max-height: 168px;
