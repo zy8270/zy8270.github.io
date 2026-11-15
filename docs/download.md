@@ -2,19 +2,13 @@
 
 ## 最新版本
 
-| 项 | 值 |
-| --- | --- |
-| 版本 | **v0.6.15** |
-| versionCode | 259 |
-| 发布日期 | 2026-11-03 |
-| 安装包 | `engCamera-v0.6.15-259.apk` |
-| 大小 | 约 39.4 MB |
-| 系统要求 | Android 7.0（API 24）及以上 |
-| 签名 | 项目专属 release keystore |
+<ReleaseTable />
 
-<p style="margin:26px 0">
-  <a class="VPButton brand" href="https://github.com/zy8270/engCamera/releases/download/v0.6.15/engCamera-v0.6.15-259.apk">⬇️ 下载 engCamera-v0.6.15-259.apk</a>
-</p>
+<DownloadButton />
+
+::: tip 版本信息是自动的
+上面的版本号、文件名、大小、SHA-256 与下载链接都由本站**自动**从 [GitHub Releases](https://github.com/zy8270/engCamera/releases) 读取——每次发版后无需手工改文档。若你打开本页时 App 刚好发了新版，页面会自动切到最新链接。
+:::
 
 ::: warning 关于安装
 APK 直接下载自 GitHub Releases，非 Google Play 分发，安装时系统会提示"未知来源应用"——这是侧载的正常提示，允许安装即可。
@@ -52,9 +46,11 @@ APK 直接下载自 GitHub Releases，非 Google Play 分发，安装时系统�
 
 ## 验证安装包
 
-如需校验下载完整性，可在电脑上用 `aapt2` 或 `apksigner` 检查：
+如需校验下载完整性，可在电脑上用 `aapt2` 或 `apksigner` 检查，文件名与 versionCode 以上方表格为准：
 
 ```bash
-aapt2 dump badging engCamera-v0.6.15-259.apk | head -3
-# package: name='com.engcamera' versionCode='259' versionName='0.6.15' ...
+aapt2 dump badging <下载的文件名>.apk | head -3
+# package: name='com.engcamera' versionCode='…' versionName='…' ...
 ```
+
+也可以在手机上核对 SHA-256（表格里的值与 GitHub 上该 Release 资产的 digest 一致）。

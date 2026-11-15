@@ -3,6 +3,10 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
+  # 每日定时重建：把最新 Release 的版本号/链接重新烧进静态产物，
+  # 即使 App 发版后没触发本仓库（前端也会实时校正，这里是给 SSR 与搜索引擎兜底）
+  schedule:
+    - cron: '17 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -27,6 +31,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      # 抓取最新 Release 写入快照（失败则沿用已提交的 JSON，不阻塞构建）
+      - name: Fetch latest release
+        run: npm run release
 
       - name: Build site
         run: npm run build

@@ -4,8 +4,9 @@
   "private": true,
   "description": "工程水印相机 (engCamera) 官方网站与使用说明书",
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "release": "node scripts/fetch-release.mjs",
+    "dev": "npm run release && vitepress dev docs",
+    "build": "npm run release && vitepress build docs",
     "preview": "vitepress preview docs"
   },
   "devDependencies": {

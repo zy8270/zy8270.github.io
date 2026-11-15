@@ -67,6 +67,7 @@ export default defineConfig({
             { text: '模板导入与导出', link: '/wiki/template-transfer' },
             { text: '液态玻璃', link: '/wiki/liquid-glass' },
             { text: '水印位置与重力', link: '/wiki/position' },
+            { text: '防伪码与品牌角标', link: '/wiki/anticounterfeit' },
           ],
         },
         {
@@ -74,6 +75,7 @@ export default defineConfig({
           items: [
             { text: '工程组（多工地）', link: '/wiki/project-groups' },
             { text: '拍照确认与标注', link: '/wiki/annotate' },
+            { text: '连拍拼图', link: '/wiki/collage' },
             { text: '给已有图片加水印', link: '/wiki/batch-watermark' },
             { text: '相册', link: '/wiki/gallery' },
           ],
