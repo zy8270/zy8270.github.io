@@ -5,10 +5,12 @@
  *   releases/<tag>/<apkName>   —— APK 本体（immutable 缓存）
  *   latest.json                —— 最新版本元数据（5 分钟缓存）
  *
- * 换成 R2 自定义域名时只改 R2_PUBLIC_BASE 一处（Action 里那份也要同步改）。
+ * 用自定义域名 dl.mlmm.eu.org（走 CF 边缘节点，比 r2.dev 开发域名稳定，
+ * r2.dev 是 CF 官方标注的测试用域名、有限速）。换域名时只改 R2_PUBLIC_BASE
+ * 一处（engCamera 仓库的发版 Action 里那份也要同步改）。
  */
 
-export const R2_PUBLIC_BASE = 'https://pub-dd825b6251784cca9e7de8b1d0942078.r2.dev'
+export const R2_PUBLIC_BASE = 'https://dl.mlmm.eu.org'
 
 /** 最新版本的元数据（跨域可读，桶上已配 CORS） */
 export const R2_LATEST_JSON = `${R2_PUBLIC_BASE}/latest.json`

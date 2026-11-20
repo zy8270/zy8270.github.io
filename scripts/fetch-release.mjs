@@ -22,7 +22,7 @@ const OUT = join(ROOT, 'docs/.vitepress/release.generated.json')
 const OUT_PUBLIC = join(ROOT, 'docs/public/latest-release.json')
 
 /** R2 镜像公网前缀与路径规则（与 docs/.vitepress/r2.ts、发版 Action 保持一致） */
-const R2_PUBLIC_BASE = 'https://pub-dd825b6251784cca9e7de8b1d0942078.r2.dev'
+const R2_PUBLIC_BASE = 'https://dl.mlmm.eu.org'
 const R2_LATEST_JSON = `${R2_PUBLIC_BASE}/latest.json`
 
 /** 读取 R2 的 latest.json，确认镜像已就绪的 tag；拿不到返回 null（不阻塞构建） */
