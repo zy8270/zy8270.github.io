@@ -6,12 +6,14 @@
 
 <DownloadButton />
 
-::: tip 版本信息是自动的
-上面的版本号、文件名、大小、SHA-256 与下载链接都由本站**自动**从 [GitHub Releases](https://github.com/zy8270/engCamera/releases) 读取——每次发版后无需手工改文档。若你打开本页时 App 刚好发了新版，页面会自动切到最新链接。
+::: tip 两个下载源，任选其一
+默认下载走 **Cloudflare 镜像**（国内访问更快更稳），按钮下方同时给出 **GitHub 备用链接**——两个链接是同一个安装包，SHA-256 完全一致。镜像同步通常在发版后几分钟内完成。
+
+版本号、文件名、大小、SHA-256 都由本站**自动**读取，每次发版后无需手工改文档。若你打开本页时 App 刚好发了新版，页面会自动切到最新链接。
 :::
 
 ::: warning 关于安装
-APK 直接下载自 GitHub Releases，非 Google Play 分发，安装时系统会提示"未知来源应用"——这是侧载的正常提示，允许安装即可。
+APK 由本站直接提供（Cloudflare 镜像）或从 [GitHub Releases](https://github.com/zy8270/engCamera/releases) 下载，非 Google Play 分发，安装时系统会提示"未知来源应用"——这是侧载的正常提示，允许安装即可。
 :::
 
 ## 安装步骤
